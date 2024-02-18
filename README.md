@@ -1,2 +1,9 @@
 # hospital-unittesting
-Testing for hospital website! I have definitely made this repo private so no one can get to it.
+
+Used for testing hospital website.
+
+Run using:
+python3 main.py --test
+
+Can dry run code with:
+python3 main.py --test --dry-run
