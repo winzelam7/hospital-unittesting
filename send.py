@@ -55,6 +55,24 @@ def test_login():
 
     return response.status
 
+# add some data to website
+def test_put():
+    connection = http.client.HTTPSConnection('zhwwmaomc.net', timeout=2)
+    print(connection)
+    headers = {'Content-type': 'application/json'}
+
+    message = {'data': "This is some test data"}
+    json_data = json.dumps(message)
+
+    connection.request('PUT', '/put', json_data, headers)
+
+    response = connection.getresponse()
+    print(response.read().decode())
+
+    connection.close()
+
+    return response.status
+
 # calculate credentials for login that will actually work
 def get_credentials():
     un = "test" + "user" + str(50)

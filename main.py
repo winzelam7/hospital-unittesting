@@ -41,6 +41,10 @@ class Testing(unittest.TestCase):
     def test_loginpass(self):
         response = send.test_login()
         self.assertEqual(response, 201)
+    
+    def test_put(self):
+        response = send.test_put()
+        self.assertEqual(response, 200)
 
 if __name__ == '__main__':
     #args = parse_args()
