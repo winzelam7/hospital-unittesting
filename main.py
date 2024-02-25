@@ -38,10 +38,12 @@ class Testing(unittest.TestCase):
         response = send.test_failure()
         self.assertEqual(response, 301)
     
+    # test for login to work
     def test_loginpass(self):
         response = send.test_login()
         self.assertEqual(response, 201)
     
+    # test a PUT request
     def test_put(self):
         response = send.test_put()
         self.assertEqual(response, 200)

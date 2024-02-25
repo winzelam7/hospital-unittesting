@@ -75,6 +75,7 @@ def test_put():
 
 # calculate credentials for login that will actually work
 def get_credentials():
+    special = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')'}
     un = "test" + "user" + str(50)
-    pw = "Password" + "1" + "!"
+    pw = "Password" + "1" + special[0]
     return [un, pw]
